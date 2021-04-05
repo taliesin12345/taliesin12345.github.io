@@ -123,7 +123,7 @@ h2 ~ p {
 /* COLUMN STYLES */
 .col-three {
   display: flex;
-  flex: 1;
+  flex: 1 1 0;
 }
 .col {
   box-sizing: border-box;
@@ -136,7 +136,7 @@ h2 ~ p {
   flex: 0 1 15em;
 }
 .col-three .col-content {
-  flex: 1;
+  flex: 1 1 0;
 }
 .col-three .col-aside {
   flex: 0 1 20em;
@@ -243,7 +243,7 @@ h2 ~ p {
   margin-top: 1em;
 }
 .callout-title {
-  flex: 1;
+  flex: 1 1 0;
   font-size: 5.75vw;
   text-align: right;
   text-transform: uppercase;
