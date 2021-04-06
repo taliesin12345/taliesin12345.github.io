@@ -6,8 +6,12 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: helvetica, arial, sans;
+  font-family: 'Open Sans', helvetica, arial, sans;
   min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', helvetica, sans;
+  font-weight: 100;
 }
 .content-container {
   display: flex;
@@ -336,15 +340,15 @@ h2 ~ p {
   color: #fff;
   display: inline-block;
   font-family: helvetica, arial, sans;
-  font-size: 1rem;
+  font-size: 1.7em;
   font-weight: bold;
-  height: 2.5em;
+  height: 1.5em;
   line-height: 1;
-  padding-top: 0.85em;
+  padding-top: 0.25em;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  width: 2.5em;
+  width: 1.5em;
 }
 .social-list > li {
   display: inline-block;
@@ -560,8 +564,6 @@ h2 ~ p {
 }
 
 /* MEDIA QUERIES */
-/* In new browsers, the query can also be written with '(width <= 800px)';
-altra sintassi comoda: '(30em <= width <= 50 em)' */
 @media (max-width: 800px) {
   html {
     box-shadow: none;
