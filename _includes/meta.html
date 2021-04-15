@@ -1,0 +1,68 @@
+<!-- This file includes some examples of good meta content with og properties, and some resources to add even more. -->
+
+<meta property="og:type" content="website / article / book / profile / ecc">
+<meta property="og:url" content="http://www.example.com/this-url">
+<meta property="og:image" content="http://www.example.com/image.jpg">
+<!-- Additional structured properties for og:image:
+<meta property="og:image:secure_url" content="https://secure.example.com/image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="300">
+<meta property="og:image:alt" content="A shiny red apple">
+Same for 'og:audio' and 'og:video' (see documentation) -->
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:site_name" content="Test Website">
+<!-- Useful snippet of code per sistematizzare un po' di più queste proprietà
+meta con Jekyll (cf. https://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/ e le specifiche del protocollo: https://ogp.me. Cf. anche https://www.larsgregori.de/2020/05/26/jekyll-twitter-cards-and-open-graph/ e https://vrepin.org/vr/JekyllMeta/):
+  <meta content="{{ site.title }}" property="og:site_name">
+{% if page.title %}
+  <meta content="{{ page.title }}" property="og:title">
+{% else %}
+  <meta content="{{ site.title }}" property="og:title">
+{% endif %}
+{% if page.title %}
+  <meta content="article" property="og:type">
+{% else %}
+  <meta content="website" property="og:type">
+{% endif %}
+{% if page.description %}
+  <meta content="{{ page.description }}" property="og:description">
+{% else %}
+  <meta content="{{ site.description }}" property="og:description">
+{% endif %}
+{% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+{% endif %}
+{% if page.date %}
+  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+  <meta content="{{ site.url }}/about/" property="article:author">
+{% endif %}
+{% if page.image %}
+  <meta content="/img/srcset/{{ page.image }}" property="og:image">
+{% else %}
+  <meta content="/img/logo-high-resolution.png" property="og:image">
+{% endif %}
+{% if page.categories %}
+  {% for category in page.categories limit:1 %}
+  <meta content="{{ category }}" property="article:section">
+  {% endfor %}
+{% endif %}
+{% if page.tags %}
+  {% for tag in page.tags %}
+  <meta content="{{ tag }}" property="article:tag">
+  {% endfor %}
+{% endif %}
+Altro snippet (Categories sono limitate a 1 perché Open Graph permette di specificare solo 1 section, cf. l'articolo):
+{% if page.categories %}
+  {% for category in page.categories limit:1 %}
+  <meta content="{{ category }}" property="article:section">
+  {% endfor %}
+{% endif %}
+{% if page.tags %}
+  {% for tag in page.tags %}
+  <meta content="{{ tag }}" property="article:tag">
+  {% endfor %}
+{% endif %}
+-->
