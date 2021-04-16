@@ -9,15 +9,16 @@ function activateGallery() {
   let description = galleryInfo.querySelector(".description");
 
   thumbnails.forEach(function(thumbnail) {
+    //Preload large images. (This method may need refining for Photography
+    // websites: see https://www.photo-mark.com/notes/image-preloading/)
+    let newImageSrc = thumbnail.dataset.largeVersion;
+    let largeVersion = new Image();
+    largeVersion.src = newImageSrc;
+
     thumbnail.addEventListener("click", function() {
       // Set clicked image as display image.
-      mainImage.setAttribute("src", thumbnail.dataset.largeVersion);
+      mainImage.setAttribute("src", newImageSrc);
       mainImage.setAttribute("alt", thumbnail.alt);
-      // More verbose version, but it sets two nice variables that could be useful:
-      // let newImageSrc = thumbnail.dataset.largeVersion;
-      // let newImageAlt = thumbnail.alt;
-      // mainImage.setAttribute("src", newImageSrc);
-      // mainImage.setAttribute("alt", newImageAlt);
 
       // Change which image is current (shown with orange box).
       document.querySelector(".current").classList.remove("current");
