@@ -182,6 +182,7 @@ h2 ~ p {
   color: #333;
 }
 /* HIDE IN THE FOOTER */
+.footer .dropdown-link,
 .footer .dropdown:hover .drop-menu,
 .footer .drop-trigger::after {
   display: none;
