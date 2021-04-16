@@ -14,6 +14,7 @@
     <meta property="og:description" content="This is a dangerous site.">
   {% endif %}
   <!-- To add meta content (SEO), see the meta file: {% include meta.html %} -->
+  <!-- There seems to be a slight problem with the favicon, when you open Dev Tools, check: -->
   <link rel="icon" href="{{ '/favicon.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
   <meta charset="utf-8">
@@ -23,6 +24,9 @@
   <link rel="stylesheet" type="text/css" href="{{ '/fonts/fontawesome-free-5.15.3-web/css/all.min.css' | relative_url }}">
   <link rel="stylesheet" type="text/css" href="{{ '/css/reset.css' | relative_url }}">
   <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}">
+
+  <!-- The script for Google Analytics goes here. If you use a TON of custom
+  analytics, the code might even go to the bottom, right above </body>. -->
 
   <script type="text/javascript" src="/js/gallery.js"></script>
   <script type="text/javascript">
